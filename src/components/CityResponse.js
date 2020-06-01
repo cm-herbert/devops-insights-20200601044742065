@@ -22,27 +22,27 @@ function CityResponse(props) {
                     <tbody>
                         <tr>
                             <td>City</td>
-                            <td>{props.responseData.name}</td>
+                            <td>{props.responseData.name}, {props.responseData.sys.country}</td>
                         </tr>
                         <tr>
                             <td>Temperature</td>
-                            <td>{props.responseData.main.temp}</td>
+                            <td>{props.responseData.main.temp} °C</td>
                         </tr>
                         <tr>
                             <td>Pressure</td>
-                            <td>{props.responseData.main.pressure}</td>
+                            <td>{props.responseData.main.pressure} hPa</td>
                         </tr>
                         <tr>
                             <td>Humidity</td>
-                            <td>{props.responseData.main.humidity}</td>
+                            <td>{props.responseData.main.humidity} %</td>
                         </tr>
                         <tr>
                             <td>Temperature (Min)</td>
-                            <td>{props.responseData.main.temp_min}</td>
+                            <td>{props.responseData.main.temp_min} °C</td>
                         </tr>
                         <tr>
                             <td>Temperature (Max)</td>
-                            <td>{props.responseData.main.temp_max}</td>
+                            <td>{props.responseData.main.temp_max} °C</td>
                         </tr>
                         <tr>
                             <td>Conditions</td>
