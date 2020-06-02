@@ -18,13 +18,8 @@ function City(props) {
 
     return (
         <div className="col-sm-4">
-<<<<<<< HEAD
-            <div className="row" styles = {{margin-right: '0', margin-left: '0'}}>
-                <div className="col-sm-10" styles = {{flex: 'none !important', width: '100% !important'}}>
-=======
             <div className="row" style = {{marginRight: 0, marginLeft: 0}}>
                 <div className="col-sm-10" style = {{flex: 'none !important', width: '100% !important'}}>
->>>>>>> bdaf7ca5d839e02a3d197ac1981a12db02077861
                     <style jsx="true">{`
                         .form-control::-webkit-input-placeholder {
                             color: #ddd;
