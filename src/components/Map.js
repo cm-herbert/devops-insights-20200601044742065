@@ -16,7 +16,7 @@ class Map extends React.Component {
 			style: 'mapbox://styles/mapbox/streets-v11'
 			
 		});
-		window.map.setBounds([
+		window.map.setMaxBounds([
 		[-49.629214, 163.175812],
 		[-31.719875,-178.630829]]);
 		window.map.setCenter([
