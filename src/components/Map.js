@@ -11,31 +11,26 @@ class Map extends React.Component {
 	
 	 componentDidMount() {
 	 	window.mapboxgl.accessToken = 'pk.eyJ1IjoiY21oZXJiZXJ0IiwiYSI6ImNrYXg0bWtnbDAzYnYydG9hbGw1bjB6YXEifQ.rr8uQMKKbsbu6DX6icqcvQ';
-	 	this.map = new window.mapboxgl.Map({
+	 	window.map = new window.mapboxgl.Map({
 			container: this.mapContainer,
 			style: 'mapbox://styles/mapbox/streets-v11'
 			
 		});
-		this.map.setBounds([
+		window.map.setBounds([
 		[-49.629214, 163.175812],
 		[-31.719875,-178.630829]]);
-		this.map.setCenter([
+		window.map.setCenter([
 		-40.815517, 174.392590]);
-		this.map.resize();
+		window.map.resize();
  	}
  	
  	componentWillUnmount() {
-    	this.map.remove();
+    	window.map.remove();
   	}
 
 
 	
     render(){
-<<<<<<< HEAD
-    	this.map.resize();
-=======
-    	//this.map.resize();
->>>>>>> e743f10a142404811a4651c9e4172c8e5b651f69
         return <div ref={el => this.mapContainer = el}/>;
 	}
 
