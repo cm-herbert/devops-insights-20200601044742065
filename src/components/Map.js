@@ -1,4 +1,5 @@
 import React from 'react';
+import 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js';
 
 class Map extends React.Component {
 
