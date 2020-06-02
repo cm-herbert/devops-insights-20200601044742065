@@ -17,10 +17,10 @@ class Map extends React.Component {
 			
 		});
 		window.map.setMaxBounds([
-		[-49.629214, 163.175812],
-		[-31.719875,-178.630829]]);
+		[ 163.175812, -49.629214],
+		[-178.630829, -31.719875]]);
 		window.map.setCenter([
-		-40.815517, 174.392590]);
+		 174.392590, -40.815517]);
 		window.map.resize();
  	}
  	
