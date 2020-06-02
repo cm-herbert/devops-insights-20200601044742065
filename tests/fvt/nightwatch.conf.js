@@ -60,7 +60,6 @@ module.exports = {
       chrome: {
         desiredCapabilities: {
           browserName: 'chrome',
-          platform: 'macOS 10.13',
           version: '65.0',
           chromedriverVersion: '2.36'
         }
