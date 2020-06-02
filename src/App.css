@@ -35,3 +35,19 @@
 	align-self: center;
 	
 }
+
+/* Flex */
+
+.HzFlex{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.HzFlexChild{
+	
+	width: 50%;
+	height: 100%;
+	display: block;
+	
+}

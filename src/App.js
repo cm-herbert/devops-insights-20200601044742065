@@ -9,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <AppHeader />
-      <AppContainer />
-      <Map/>
+      <div className="HzFlex">
+      	<Map className="Map HzFlexChild"/>
+	    <AppContainer className="AppContainer HzFlexChild" />
+      </div>
     </div>
   );
 }
