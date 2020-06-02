@@ -1,5 +1,4 @@
 import React from 'react';
-import 'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js';
 
 class Map extends React.Component {
 
@@ -10,8 +9,8 @@ class Map extends React.Component {
 	}
 	
 	 componentDidMount() {
-	 	mapboxgl.accessToken = 'pk.eyJ1IjoiY21oZXJiZXJ0IiwiYSI6ImNrYXg0bWtnbDAzYnYydG9hbGw1bjB6YXEifQ.rr8uQMKKbsbu6DX6icqcvQ';
-	 	this.map = new mapboxgl.Map({
+	 	window.mapboxgl.accessToken = 'pk.eyJ1IjoiY21oZXJiZXJ0IiwiYSI6ImNrYXg0bWtnbDAzYnYydG9hbGw1bjB6YXEifQ.rr8uQMKKbsbu6DX6icqcvQ';
+	 	this.map = new window.mapboxgl.Map({
 			container: this.mapContainer,
 			style: 'mapbox://styles/mapbox/streets-v11'
 		});
