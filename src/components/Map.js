@@ -15,14 +15,28 @@ class Map extends React.Component {
 			container: this.mapContainer,
 			style: 'mapbox://styles/mapbox/streets-v11',
 			
+<<<<<<< HEAD
 		});
+=======
+		});
+		this.map.setBounds([
+		[-49.629214, 163.175812],
+		[-31.719875,-178.630829]]);
+		this.map.setCenter([
+		-40.815517, 174.392590]);
+		this.map.resize();
+>>>>>>> 0b4e35ef9110dc52bde400048406fac8503ef53f
  	}
  	componentWillUnmount() {
     this.map.remove();
   }
 
 	componentDidUpdate(prevProps, prevState, snapshot){
+<<<<<<< HEAD
 		this.map.resize();
+=======
+		
+>>>>>>> 0b4e35ef9110dc52bde400048406fac8503ef53f
 	}
 
 	
