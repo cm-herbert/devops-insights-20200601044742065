@@ -13,7 +13,7 @@ class Map extends React.Component {
 	 	window.mapboxgl.accessToken = 'pk.eyJ1IjoiY21oZXJiZXJ0IiwiYSI6ImNrYXg0bWtnbDAzYnYydG9hbGw1bjB6YXEifQ.rr8uQMKKbsbu6DX6icqcvQ';
 	 	this.map = new window.mapboxgl.Map({
 			container: this.mapContainer,
-			style: 'mapbox://styles/mapbox/streets-v11',
+			style: 'mapbox://styles/mapbox/streets-v11'
 			
 		});
 		this.map.setBounds([
@@ -28,13 +28,11 @@ class Map extends React.Component {
     	this.map.remove();
   	}
 
-	componentDidUpdate(prevProps, prevState, snapshot){
-	}
 
 	
     render(){
     	this.map.resize();
-        return <div id="map" ref={el => this.mapContainer = el}/>;
+        return <div ref={el => this.mapContainer = el}/>;
 	}
 
 }
