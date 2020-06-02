@@ -31,7 +31,11 @@ class Map extends React.Component {
 
 	
     render(){
+<<<<<<< HEAD
     	this.map.resize();
+=======
+    	//this.map.resize();
+>>>>>>> e743f10a142404811a4651c9e4172c8e5b651f69
         return <div ref={el => this.mapContainer = el}/>;
 	}
 
