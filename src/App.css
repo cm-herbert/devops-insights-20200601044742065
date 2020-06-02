@@ -1,6 +1,9 @@
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
 }
 
 .App-logo {
@@ -20,4 +23,15 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+
+/*MAP*/
+
+.mapboxgl-map{
+	
+	width: 80vmin;
+	height: 80vmin;
+	align-self: center;
+	
 }
