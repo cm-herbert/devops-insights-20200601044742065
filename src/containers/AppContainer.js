@@ -42,7 +42,6 @@ function AppContainer(props) {
                 <div className="col-sm-2"></div>
             </div>    
         </div>
-        <div name
     );
 }
   
