@@ -66,7 +66,7 @@ function City(props) {
                         }}
                     ></input>   
                     </div>
-            //Work with AutoComplete Suggestions - built from previous searches
+            
             <div className="ac_container" style={{display: global.session.locations.length > 0 && global.session.acToggled ? 'block' :'none'}}>
                 <AutoComplete onItemSelected={validate}/>
             </div>
