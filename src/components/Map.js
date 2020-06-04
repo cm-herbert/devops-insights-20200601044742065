@@ -19,9 +19,6 @@ class Map extends React.Component {
 			style: 'mapbox://styles/mapbox/streets-v11'
 			
 		});
-		 /*window.map.setMaxBounds([
-		[ 163.175812, -49.629214],
-		[-178.630829, -31.719875]]);*/
 		this.map.setZoom(4);
 		this.map.setCenter([
 		 174.392590, -40.815517]);
@@ -32,6 +29,7 @@ class Map extends React.Component {
 		});
 	 }
 	 
+	//Adds map marker to map, updates appcontainer which pulls weather information
 	async addMarker(location){
 		if(await this.props.onHandleMarker(location) == true){
 			var mark = new window.mapboxgl.Marker().setLngLat(location).addTo(this.map);

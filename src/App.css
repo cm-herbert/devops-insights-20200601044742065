@@ -52,3 +52,48 @@
 	display: block;
 	
 }
+
+/*Container*/
+.CenterPaddedContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.CenterPaddedContainerChild{
+  padding: 0 10vmin 0 10vmin;
+}
+
+.table-justify{
+  text-align: justify;
+}
+
+/*Auto Complete*/
+
+.ac_container{
+    position: absolute;
+    background: white;
+    padding: 5px;
+    margin-right:100px;
+    border: black 1px solid;
+}
+.ac_list{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.ac_item{
+}
+
+.ac_text:hover{
+  color: rgb(0, 123, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ac_text{
+  margin-left: 10px;
+  padding: 2px;
+}
+
