@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import AppContainer from '../containers/AppContainer';
 
-//Dynamically generated component giving the user a drop down suggestion menu
 class AutoComplete extends React.Component {
-	//https://react.tips/how-to-create-reactjs-components-dynamically/
+//https://react.tips/how-to-create-reactjs-components-dynamically/
 	constructor(props){
 		super();
         this.props = props;

@@ -66,7 +66,6 @@ function City(props) {
                         }}
                     ></input>   
                     </div>
-            
             <div className="ac_container" style={{display: global.session.locations.length > 0 && global.session.acToggled ? 'block' :'none'}}>
                 <AutoComplete onItemSelected={validate}/>
             </div>

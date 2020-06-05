@@ -6,10 +6,12 @@ class Map extends React.Component {
 
 	constructor(props){
 		super();
-		this.map = undefined;
-		this.markers = new Array();
-		this.container = props.container;
+		this.map = undefined;				//Map
+		this.container = props.container;	//Container
+		this.supress_marker = false;		//Should map cancel marker placement - used when clicking on markers
+		
 		global.session.map = this;
+		
 		
 	}
 	
@@ -20,25 +22,45 @@ class Map extends React.Component {
 			style: 'mapbox://styles/mapbox/satellite-streets-v11'
 			
 		});
+		
 		this.map.setZoom(4);
 		this.map.setCenter([
 		 174.392590, -40.815517]);
 		this.map.resize();
 		
 		this.map.on('click', (event) => {
-			this.addMarker(event.lngLat);
+			//Stops another marker being placed after click event
+			if(!this.supress_marker){
+				console.log("Map: " + event);
+				this.addMarker(event.lngLat);
+			}
+			else
+				this.supress_marker = false;
+
 		});
+	
+		
 	 }
 	 
 	async addMarker(location){
+		//Create Custom Marker using div so can capture click event
 		if(await this.props.onHandleMarker(location) == true){
-			var mark = new window.mapboxgl.Marker().setLngLat(location).addTo(this.map);
-			this.markers.push(mark);
+			var el=document.createElement('div');
+			el.classList.add("map_marker");
+			el.style.background = "dodgerblue";
+			el.addEventListener('click', (event) => {this.supress_marker = true;
+				this.props.onHandleMarker(location);});
+			var mark = new window.mapboxgl.Marker(el).setLngLat(location).addTo(this.map);
 		}
 	}
 	async addMarkerCoord(location){
-			var mark = new window.mapboxgl.Marker().setLngLat(location).addTo(this.map);
-			this.markers.push(mark);
+		//Create Custom Marker using div so can capture click event
+		var el=document.createElement('div');
+			el.classList.add("map_marker");
+			el.style.background = "lightcoral";
+			el.addEventListener('click', (event) => {this.supress_marker = true;
+				this.props.onHandleMarker(location);});
+			var mark = new window.mapboxgl.Marker(el).setLngLat(location).addTo(this.map);
 	}
  	
  	componentWillUnmount() {

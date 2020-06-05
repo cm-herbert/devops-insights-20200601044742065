@@ -97,3 +97,17 @@
   padding: 2px;
 }
 
+.mapboxgl-marker:hover{
+  border: red 1px solid;
+}
+
+.map_marker{
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
