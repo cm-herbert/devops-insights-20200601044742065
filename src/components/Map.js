@@ -9,6 +9,7 @@ class Map extends React.Component {
 		this.map = undefined;
 		this.markers = new Array();
 		this.container = props.container;
+		global.session.map = this;
 		
 	}
 	
@@ -16,7 +17,7 @@ class Map extends React.Component {
 	 	window.mapboxgl.accessToken = 'pk.eyJ1IjoiY21oZXJiZXJ0IiwiYSI6ImNrYXg0bWtnbDAzYnYydG9hbGw1bjB6YXEifQ.rr8uQMKKbsbu6DX6icqcvQ';
 		this.map = new window.mapboxgl.Map({
 			container: this.mapContainer,
-			style: 'mapbox://styles/mapbox/streets-v11'
+			style: 'mapbox://styles/mapbox/satellite-streets-v11'
 			
 		});
 		this.map.setZoom(4);
@@ -29,14 +30,15 @@ class Map extends React.Component {
 		});
 	 }
 	 
-	//Adds map marker to map, updates appcontainer which pulls weather information
 	async addMarker(location){
 		if(await this.props.onHandleMarker(location) == true){
 			var mark = new window.mapboxgl.Marker().setLngLat(location).addTo(this.map);
 			this.markers.push(mark);
 		}
-		
-
+	}
+	async addMarkerCoord(location){
+			var mark = new window.mapboxgl.Marker().setLngLat(location).addTo(this.map);
+			this.markers.push(mark);
 	}
  	
  	componentWillUnmount() {
