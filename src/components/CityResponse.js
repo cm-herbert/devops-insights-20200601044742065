@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 function CityResponse(props) {
 
@@ -17,8 +18,9 @@ function CityResponse(props) {
 
     if(props.responseData.cod === 200) {
         return (
-            <div className="col-sm-8">
-                <table className="table table-info table-hover">
+            <div>
+                <br/>
+                <table className="table table-info table-hover table-justify">
                     <tbody>
                         <tr>
                             <td>City</td>
